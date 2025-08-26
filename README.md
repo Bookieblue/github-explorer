@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Mini GitHub Explorer
+A modern, responsive GitHub user search application built with Next.js, TypeScript, and Tailwind CSS.
+Features
 
-## Getting Started
+1. Search GitHub users by username
+2. Display user profile information (avatar, name, bio, stats)
+3. Show latest 5 repositories
+4. Google/GitHub authentication
+5. Loading states and error handling
+6. Fully responsive design
+7. Clean, modern UI with shadcn/ui components
 
-First, run the development server:
+Tech Stack
 
-```bash
-npm run dev
+Framework: Next.js 14 (App Router)
+Language: TypeScript
+Styling: Tailwind CSS
+Components: shadcn/ui
+Authentication: NextAuth.js
+Icons: Lucide React
+
+Getting Started
+Prerequisites
+
+Node.js 18.17 or later
+npm or yarn package manager
+
+Installation
+
+Clone the repository:
+
+bashgit clone https://github.com/Bookieblue/github-explorer.git
+cd mini-github-explorer
+
+Install dependencies:
+
+bashnpm install
+# or
+yarn install
+
+Set up environment variables:
+Create a .env.local file in the root directory:
+
+envNEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=your-secret-key-here
+GOOGLE_CLIENT_ID=your-google-client-id
+GOOGLE_CLIENT_SECRET=your-google-client-secret
+GITHUB_ID=your-github-app-id
+GITHUB_SECRET=your-github-app-secret
+Setting Up Authentication (Optional)
+To enable authentication features:
+
+Google OAuth:
+
+Go to Google Cloud Console
+Create a new project or select existing one
+Enable Google+ API
+Create OAuth 2.0 credentials
+Add http://localhost:3000/api/auth/callback/google to authorized redirect URIs
+
+
+GitHub OAuth:
+
+Go to GitHub Settings > Developer settings > OAuth Apps
+Create a new OAuth App
+Set Authorization callback URL to http://localhost:3000/api/auth/callback/github
+
+
+
+Running the Application
+
+Start the development server:
+
+bashnpm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Without Authentication: Simply enter a GitHub username and click search
+With Authentication: Sign in with Google or GitHub for enhanced features
+Search: Type any GitHub username and press enter or click the search button
+View Results: See user profile, stats, and their latest 5 repositories
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
