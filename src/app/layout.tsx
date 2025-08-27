@@ -3,8 +3,8 @@ import { Providers } from "./provider"   // ✅ import your wrapper
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "My App",
-  description: "Next.js + NextAuth Example",
+  title: "Github Explorer",
+  description: "search for profiles",
 }
 
 export default function RootLayout({
