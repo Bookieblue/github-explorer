@@ -20,7 +20,10 @@ export function AuthButton() {
   const handleSignIn = async (provider: 'google' | 'github') => {
     setIsLoading(true)
     try {
-      await signIn(provider)
+      // Redirect to the main page after successful sign in
+      await signIn(provider, { 
+        callbackUrl: window.location.origin // This will redirect to the main page
+      })
     } catch (error) {
       console.error('Sign in error:', error)
     } finally {

@@ -1,13 +1,10 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-import { Providers } from './provider'
-
-const inter = Inter({ subsets: ['latin'] })
+import type { Metadata } from "next"
+import { Providers } from "./provider"   // ✅ import your wrapper
+import "./globals.css"
 
 export const metadata: Metadata = {
-  title: 'Mini GitHub Explorer',
-  description: 'Search and explore GitHub users and their repositories',
+  title: "My App",
+  description: "Next.js + NextAuth Example",
 }
 
 export default function RootLayout({
@@ -17,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <Providers session={null}>
           {children}
         </Providers>
