@@ -11,7 +11,7 @@ import {
   DropdownMenuSeparator, 
   DropdownMenuTrigger 
 } from '@/components/ui/dropdown-menu'
-import { LogIn, LogOut, User, Github } from 'lucide-react'
+import { LogIn, LogOut, User, Github, ChevronDown } from 'lucide-react'
 
 export function AuthButton() {
   const { data: session, status } = useSession()
@@ -65,7 +65,9 @@ export function AuthButton() {
                 {session.user.name?.[0] || session.user.email?.[0] || 'U'}
               </AvatarFallback>
             </Avatar>
+            <ChevronDown/>
           </Button>
+          
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-56" align="end" forceMount>
           <div className="flex items-center justify-start gap-2 p-2">
@@ -78,6 +80,7 @@ export function AuthButton() {
                   {session.user.email}
                 </p>
               )}
+              
             </div>
           </div>
           <DropdownMenuSeparator />
