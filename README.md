@@ -79,7 +79,7 @@ Open http://localhost:3000 in your browser
 
 Usage
 
-Without Authentication: Simply enter a GitHub username and click search
+Authentication: Sign in with Google or Github
 Search: Type any GitHub username and press enter or click the search button
 View Results: See user profile, stats, and their latest 5 repositories
 
