@@ -12,7 +12,7 @@ Features
 
 Tech Stack
 
-Framework: Next.js 14 (App Router)
+Framework: Next.js 15.5
 Language: TypeScript
 Styling: Tailwind CSS
 Components: shadcn/ui
@@ -80,7 +80,6 @@ Open http://localhost:3000 in your browser
 Usage
 
 Without Authentication: Simply enter a GitHub username and click search
-With Authentication: Sign in with Google or GitHub for enhanced features
 Search: Type any GitHub username and press enter or click the search button
 View Results: See user profile, stats, and their latest 5 repositories
 
