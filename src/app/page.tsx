@@ -77,32 +77,32 @@ export default function Home() {
     )
   }
 
-  // Show authentication required state
-  if (!session) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
-        <Header />
-        <main className="container mx-auto px-4 py-8 max-w-6xl">
-          <div className="flex items-center justify-center min-h-[60vh]">
-            <Card className="w-full max-w-md">
-              <CardHeader className="text-center">
-                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-50 dark:bg-blue-950">
-                  <Lock className="h-6 w-6 text-blue-600 dark:text-blue-400" />
-                </div>
-                <CardTitle className="text-2xl">Sign in Required</CardTitle>
-                <CardDescription>
-                  Please sign in with your GitHub or Google account to search for GitHub users and repositories.
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="flex flex-col items-center space-y-4">
-                <AuthButton />
-              </CardContent>
-            </Card>
-          </div>
-        </main>
-      </div>
-    )
-  }
+  // // Show authentication required state
+  // if (!session) {
+  //   return (
+  //     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
+  //       <Header />
+  //       <main className="container mx-auto px-4 py-8 max-w-6xl">
+  //         <div className="flex items-center justify-center min-h-[60vh]">
+  //           <Card className="w-full max-w-md">
+  //             <CardHeader className="text-center">
+  //               <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-50 dark:bg-blue-950">
+  //                 <Lock className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+  //               </div>
+  //               <CardTitle className="text-2xl">Sign in Required</CardTitle>
+  //               <CardDescription>
+  //                 Please sign in with your GitHub or Google account to search for GitHub users and repositories.
+  //               </CardDescription>
+  //             </CardHeader>
+  //             <CardContent className="flex flex-col items-center space-y-4">
+  //               <AuthButton />
+  //             </CardContent>
+  //           </Card>
+  //         </div>
+  //       </main>
+  //     </div>
+  //   )
+  // }
 
   // Main authenticated app content
   return (
